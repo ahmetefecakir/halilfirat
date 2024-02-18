@@ -246,5 +246,56 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Scripts -->
+    <!-- Protection Script -->
+    <script id="protection">
+      document.onkeydown = function (e) {
+        // F12 Engelle
+        if (e.keyCode == 123) {
+          return false;
+        }
+
+        // CTRL+Shift+I Engelle
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+
+        // CTRL+I Engelle
+        if (e.ctrlKey && e.keyCode == 73) {
+          return false;
+        }
+
+        // CTRL+K Engelle
+        if (e.ctrlKey && e.keyCode == 75) {
+          return false;
+        }
+
+        // CTRL+Shift+C Engelle
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+          return false;
+        }
+
+        // CTRL+J Engelle
+        if (e.ctrlKey && e.keyCode == 74) {
+          return false;
+        }
+
+        // CTRL+E Engelle
+        if (e.ctrlKey && e.keyCode == 69) {
+          return false;
+        }
+
+        // CTRL+S Engelle
+        if (e.ctrlKey && e.keyCode == 83) {
+          return false;
+        }
+
+        // CTRL+U Engelle
+        if (e.ctrlKey && e.keyCode == 85) {
+          return false;
+        }
+      };
+    </script>
   </body>
 </html>
