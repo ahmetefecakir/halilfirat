@@ -38,55 +38,71 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-        <!-- Protection Script -->
-        <script id="protection">
-          document.onkeydown = function (e) {
-            // F12 Engelle
-            if (e.keyCode == 123) {
-              return false;
-            }
-    
-            // CTRL+Shift+I Engelle
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-              return false;
-            }
-    
-            // CTRL+I Engelle
-            if (e.ctrlKey && e.keyCode == 73) {
-              return false;
-            }
-    
-            // CTRL+K Engelle
-            if (e.ctrlKey && e.keyCode == 75) {
-              return false;
-            }
-    
-            // CTRL+Shift+C Engelle
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
-              return false;
-            }
-    
-            // CTRL+J Engelle
-            if (e.ctrlKey && e.keyCode == 74) {
-              return false;
-            }
-    
-            // CTRL+E Engelle
-            if (e.ctrlKey && e.keyCode == 69) {
-              return false;
-            }
-    
-            // CTRL+S Engelle
-            if (e.ctrlKey && e.keyCode == 83) {
-              return false;
-            }
-    
-            // CTRL+U Engelle
-            if (e.ctrlKey && e.keyCode == 85) {
-              return false;
-            }
-          };
-        </script>
+    <!-- Protection Script -->
+    <script id="protection">
+      document.onkeydown = function (e) {
+        // F12 Engelle
+        if (e.keyCode == 123) {
+          return false;
+        }
+
+        // CTRL+Shift+I Engelle
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+
+        // CTRL+I Engelle
+        if (e.ctrlKey && e.keyCode == 73) {
+          return false;
+        }
+
+        // CTRL+K Engelle
+        if (e.ctrlKey && e.keyCode == 75) {
+          return false;
+        }
+
+        // CTRL+Shift+C Engelle
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+          return false;
+        }
+
+        // CTRL+J Engelle
+        if (e.ctrlKey && e.keyCode == 74) {
+          return false;
+        }
+
+        // CTRL+E Engelle
+        if (e.ctrlKey && e.keyCode == 69) {
+          return false;
+        }
+
+        // CTRL+S Engelle
+        if (e.ctrlKey && e.keyCode == 83) {
+          return false;
+        }
+
+        // CTRL+U Engelle
+        if (e.ctrlKey && e.keyCode == 85) {
+          return false;
+        }
+      };
+    </script>
+
+    <script language="JavaScript">
+      document.oncontextmenu = function () {
+        return false;
+      };
+      if (document.layers) {
+        window.captureEvents(Event.MOUSEDOWN);
+        window.onmousedown = function (e) {
+          if (e.target == document) return false;
+        };
+      } else {
+        document.onmousedown = function () {
+          return false;
+        };
+      }
+    </script>
   </head>
 
   <body>
@@ -298,6 +314,5 @@
     <script src="js/main.js"></script>
 
     <!-- Scripts -->
-
   </body>
 </html>
